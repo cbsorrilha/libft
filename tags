@@ -1,0 +1,7 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+CC	/Users/cesar.barros/lab/libft/Makefile	/^CC	= cc$/;"	m	language:Make
+CFLAGS	/Users/cesar.barros/lab/libft/Makefile	/^CFLAGS	= -Wall -g$/;"	m	language:Make
+NAME	/Users/cesar.barros/lab/libft/Makefile	/^NAME	= hello$/;"	m	language:Make
+OBJS	/Users/cesar.barros/lab/libft/Makefile	/^OBJS	= $(SRCS:.c=.o)$/;"	m	language:Make
+RM	/Users/cesar.barros/lab/libft/Makefile	/^RM	= rm -f$/;"	m	language:Make
+SRCS	/Users/cesar.barros/lab/libft/Makefile	/^SRCS	= libft.h ft_isalpha.c$/;"	m	language:Make
