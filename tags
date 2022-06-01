@@ -1,7 +1,33 @@
 !_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+AR	/Users/cesar.barros/lab/libft/Makefile	/^AR	= ar rc$/;"	m	language:Make
 CC	/Users/cesar.barros/lab/libft/Makefile	/^CC	= cc$/;"	m	language:Make
-CFLAGS	/Users/cesar.barros/lab/libft/Makefile	/^CFLAGS	= -Wall -g$/;"	m	language:Make
-NAME	/Users/cesar.barros/lab/libft/Makefile	/^NAME	= hello$/;"	m	language:Make
+CFLAGS	/Users/cesar.barros/lab/libft/Makefile	/^CFLAGS	= -Wall -Wextra -Werror$/;"	m	language:Make
+ft_bzero	/Users/cesar.barros/lab/libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	language:C++
+ft_bzero	/Users/cesar.barros/lab/libft/libft.h	/^void	ft_bzero(void *b, size_t len);$/;"	p	language:C++
+ft_isalnum	/Users/cesar.barros/lab/libft/ft_isalnum.c	/^int	ft_isalnum(int ch)$/;"	f	language:C++
+ft_isalnum	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_isalnum(int argument);$/;"	p	language:C++
+ft_isalpha	/Users/cesar.barros/lab/libft/ft_isalpha.c	/^int	ft_isalpha(int ch)$/;"	f	language:C++
+ft_isalpha	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_isalpha(int argument);$/;"	p	language:C++
+ft_isascii	/Users/cesar.barros/lab/libft/ft_isascii.c	/^int	ft_isascii(int ch)$/;"	f	language:C++
+ft_isascii	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_isascii(int argument);$/;"	p	language:C++
+ft_isdigit	/Users/cesar.barros/lab/libft/ft_isdigit.c	/^int	ft_isdigit(int ch)$/;"	f	language:C++
+ft_isdigit	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_isdigit(int argument);$/;"	p	language:C++
+ft_isprint	/Users/cesar.barros/lab/libft/ft_isprint.c	/^int	ft_isprint(int ch)$/;"	f	language:C++
+ft_isprint	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_isprint(int argument);$/;"	p	language:C++
+ft_memcpy	/Users/cesar.barros/lab/libft/ft_memcpy.c	/^void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)$/;"	f	language:C++
+ft_memcpy	/Users/cesar.barros/lab/libft/libft.h	/^void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);$/;"	p	language:C++
+ft_memset	/Users/cesar.barros/lab/libft/ft_memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f	language:C++
+ft_memset	/Users/cesar.barros/lab/libft/libft.h	/^void	*ft_memset(void *b, int c, size_t len);$/;"	p	language:C++
+ft_strlen	/Users/cesar.barros/lab/libft/ft_strlen.c	/^int	ft_strlen(char *s)$/;"	f	language:C++
+ft_strlen	/Users/cesar.barros/lab/libft/libft.h	/^size_t	ft_strlen(char *s);$/;"	p	language:C++
+ft_test_isalnum	/Users/cesar.barros/lab/libft/main.c	/^int ft_test_isalnum(void)$/;"	f	language:C++
+ft_tolower	/Users/cesar.barros/lab/libft/ft_tolower.c	/^int	ft_tolower(int ch)$/;"	f	language:C++
+ft_tolower	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_tolower(int argument);$/;"	p	language:C++
+ft_toupper	/Users/cesar.barros/lab/libft/ft_toupper.c	/^int	ft_toupper(int ch)$/;"	f	language:C++
+ft_toupper	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_toupper(int argument);$/;"	p	language:C++
+LIBFT_H	/Users/cesar.barros/lab/libft/libft.h	/^# define LIBFT_H$/;"	d	language:C++
+main	/Users/cesar.barros/lab/libft/main.c	/^int main()$/;"	f	language:C++
+NAME	/Users/cesar.barros/lab/libft/Makefile	/^NAME	= libft.a$/;"	m	language:Make
 OBJS	/Users/cesar.barros/lab/libft/Makefile	/^OBJS	= $(SRCS:.c=.o)$/;"	m	language:Make
 RM	/Users/cesar.barros/lab/libft/Makefile	/^RM	= rm -f$/;"	m	language:Make
-SRCS	/Users/cesar.barros/lab/libft/Makefile	/^SRCS	= libft.h ft_isalpha.c$/;"	m	language:Make
+SRCS	/Users/cesar.barros/lab/libft/Makefile	/^SRCS	= ft_isalnum.c\\$/;"	m	language:Make
