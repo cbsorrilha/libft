@@ -2,8 +2,11 @@
 AR	/Users/cesar.barros/lab/libft/Makefile	/^AR	= ar rc$/;"	m	language:Make
 CC	/Users/cesar.barros/lab/libft/Makefile	/^CC	= cc$/;"	m	language:Make
 CFLAGS	/Users/cesar.barros/lab/libft/Makefile	/^CFLAGS	= -Wall -Wextra -Werror$/;"	m	language:Make
+ft_atoi	/Users/cesar.barros/lab/libft/ft_atoi.c	/^int	ft_atoi(const char *str)$/;"	f	language:C++
+ft_atoi	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_atoi(const char *str);$/;"	p	language:C++
 ft_bzero	/Users/cesar.barros/lab/libft/ft_bzero.c	/^void	ft_bzero(void *s, size_t n)$/;"	f	language:C++
 ft_bzero	/Users/cesar.barros/lab/libft/libft.h	/^void	ft_bzero(void *b, size_t len);$/;"	p	language:C++
+ft_calloc	/Users/cesar.barros/lab/libft/ft_calloc.c	/^void	*ft_calloc(size_t count, size_t size)$/;"	f	language:C++
 ft_isalnum	/Users/cesar.barros/lab/libft/ft_isalnum.c	/^int	ft_isalnum(int ch)$/;"	f	language:C++
 ft_isalnum	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_isalnum(int argument);$/;"	p	language:C++
 ft_isalpha	/Users/cesar.barros/lab/libft/ft_isalpha.c	/^int	ft_isalpha(int ch)$/;"	f	language:C++
@@ -14,20 +17,41 @@ ft_isdigit	/Users/cesar.barros/lab/libft/ft_isdigit.c	/^int	ft_isdigit(int ch)$/
 ft_isdigit	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_isdigit(int argument);$/;"	p	language:C++
 ft_isprint	/Users/cesar.barros/lab/libft/ft_isprint.c	/^int	ft_isprint(int ch)$/;"	f	language:C++
 ft_isprint	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_isprint(int argument);$/;"	p	language:C++
-ft_memcpy	/Users/cesar.barros/lab/libft/ft_memcpy.c	/^void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)$/;"	f	language:C++
-ft_memcpy	/Users/cesar.barros/lab/libft/libft.h	/^void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n);$/;"	p	language:C++
+ft_memchr	/Users/cesar.barros/lab/libft/ft_memchr.c	/^void	*ft_memchr(const void *s, int c, size_t len)$/;"	f	language:C++
+ft_memchr	/Users/cesar.barros/lab/libft/libft.h	/^void	*ft_memchr(const void *s, int c, size_t len);$/;"	p	language:C++
+ft_memcmp	/Users/cesar.barros/lab/libft/ft_memcmp.c	/^int	ft_memcmp(const void *s1, const void *s2, size_t len)$/;"	f	language:C++
+ft_memcmp	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_memcmp(const void *s1, const void *s2, size_t len);$/;"	p	language:C++
+ft_memcpy	/Users/cesar.barros/lab/libft/ft_memcpy.c	/^void	*ft_memcpy(void *dst, const void *src, size_t n)$/;"	f	language:C++
+ft_memcpy	/Users/cesar.barros/lab/libft/libft.h	/^void	*ft_memcpy(void *dst, const void *src, size_t n);$/;"	p	language:C++
+ft_memmove	/Users/cesar.barros/lab/libft/ft_memmove.c	/^void	*ft_memmove(void *dst, const void *src, size_t len)$/;"	f	language:C++
+ft_memmove	/Users/cesar.barros/lab/libft/libft.h	/^void	*ft_memmove(void *dst, const void *src, size_t len);$/;"	p	language:C++
 ft_memset	/Users/cesar.barros/lab/libft/ft_memset.c	/^void	*ft_memset(void *b, int c, size_t len)$/;"	f	language:C++
 ft_memset	/Users/cesar.barros/lab/libft/libft.h	/^void	*ft_memset(void *b, int c, size_t len);$/;"	p	language:C++
+ft_strchr	/Users/cesar.barros/lab/libft/ft_strchr.c	/^char	*ft_strchr(char *s, int c)$/;"	f	language:C++
+ft_strchr	/Users/cesar.barros/lab/libft/libft.h	/^char	*ft_strchr(const char *s, int c);$/;"	p	language:C++
+ft_strlcat	/Users/cesar.barros/lab/libft/ft_strlcat.c	/^size_t	ft_strlcat(char *dst, const char *src, size_t size)$/;"	f	language:C++
+ft_strlcat	/Users/cesar.barros/lab/libft/libft.h	/^size_t	ft_strlcat(char *dst, const char *src, size_t size);$/;"	p	language:C++
+ft_strlcpy	/Users/cesar.barros/lab/libft/ft_strlcpy.c	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size)$/;"	f	language:C++
+ft_strlcpy	/Users/cesar.barros/lab/libft/libft.h	/^size_t	ft_strlcpy(char *dst, const char *src, size_t size);$/;"	p	language:C++
 ft_strlen	/Users/cesar.barros/lab/libft/ft_strlen.c	/^int	ft_strlen(char *s)$/;"	f	language:C++
 ft_strlen	/Users/cesar.barros/lab/libft/libft.h	/^size_t	ft_strlen(char *s);$/;"	p	language:C++
+ft_strncmp	/Users/cesar.barros/lab/libft/ft_strncmp.c	/^int	ft_strncmp(const char *s1, const char *s2, size_t n)$/;"	f	language:C++
+ft_strncmp	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_strncmp(const char *s1, const char *s2, size_t n);$/;"	p	language:C++
+ft_strnstr	/Users/cesar.barros/lab/libft/ft_strnstr.c	/^char	*ft_strnstr(const char *h, const char *n, size_t len)$/;"	f	language:C++
+ft_strnstr	/Users/cesar.barros/lab/libft/libft.h	/^char	*ft_strnstr(const char *haystack, const char *needle, size_t len);$/;"	p	language:C++
+ft_strrchr	/Users/cesar.barros/lab/libft/ft_strrchr.c	/^char	*ft_strrchr(const char *s, int c)$/;"	f	language:C++
+ft_strrchr	/Users/cesar.barros/lab/libft/libft.h	/^char	*ft_strrchr(const char *s, int c);$/;"	p	language:C++
 ft_test_isalnum	/Users/cesar.barros/lab/libft/main.c	/^int ft_test_isalnum(void)$/;"	f	language:C++
 ft_tolower	/Users/cesar.barros/lab/libft/ft_tolower.c	/^int	ft_tolower(int ch)$/;"	f	language:C++
 ft_tolower	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_tolower(int argument);$/;"	p	language:C++
 ft_toupper	/Users/cesar.barros/lab/libft/ft_toupper.c	/^int	ft_toupper(int ch)$/;"	f	language:C++
 ft_toupper	/Users/cesar.barros/lab/libft/libft.h	/^int		ft_toupper(int argument);$/;"	p	language:C++
+ignore_spaces	/Users/cesar.barros/lab/libft/ft_atoi.c	/^static int	ignore_spaces(const char *str)$/;"	f	language:C++	file:
+is_ignored	/Users/cesar.barros/lab/libft/ft_atoi.c	/^static int	is_ignored(char c)$/;"	f	language:C++	file:
 LIBFT_H	/Users/cesar.barros/lab/libft/libft.h	/^# define LIBFT_H$/;"	d	language:C++
 main	/Users/cesar.barros/lab/libft/main.c	/^int main()$/;"	f	language:C++
 NAME	/Users/cesar.barros/lab/libft/Makefile	/^NAME	= libft.a$/;"	m	language:Make
 OBJS	/Users/cesar.barros/lab/libft/Makefile	/^OBJS	= $(SRCS:.c=.o)$/;"	m	language:Make
 RM	/Users/cesar.barros/lab/libft/Makefile	/^RM	= rm -f$/;"	m	language:Make
 SRCS	/Users/cesar.barros/lab/libft/Makefile	/^SRCS	= ft_isalnum.c\\$/;"	m	language:Make
+valid	/Users/cesar.barros/lab/libft/ft_atoi.c	/^static int	valid(int sig)$/;"	f	language:C++	file:

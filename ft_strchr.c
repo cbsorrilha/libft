@@ -1,30 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:57:18 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/06 17:09:57 by csorrilh         ###   ########.fr       */
+/*   Created: 2022/06/06 10:52:59 by csorrilh          #+#    #+#             */
+/*   Updated: 2022/06/06 12:21:33 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdlib.h>
+#include<stdio.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strchr(char *s, int c)
 {
-	char		*tmp_dest;
-	const char	*tmp_src;
+	char	*found;
 
-	tmp_dest = (char *)dst;
-	tmp_src = (const char *)src;
-	if ((tmp_dest == NULL) && (tmp_src == NULL))
+	found = NULL;
+	if (*s == (char)c)
 	{
-		return (dst);
+		found = s;
+		return (found);
 	}
-	while (n--)
+	while (*s++)
 	{
-		*(tmp_dest++) = *(tmp_src++);
+		if (*s == (char)c)
+		{
+			found = s;
+			break ;
+		}
 	}
-	return (dst);
+	return (found);
 }

@@ -6,7 +6,7 @@
 #    By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/29 11:58:27 by csorrilh          #+#    #+#              #
-#    Updated: 2022/05/31 18:11:41 by csorrilh         ###   ########.fr        #
+#    Updated: 2022/06/10 02:02:09 by csorrilh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,17 @@ SRCS	= ft_isalnum.c\
 	  ft_strlen.c\
 	  ft_memset.c\
 	  ft_bzero.c\
-	  ft_memcpy.c
+	  ft_memcpy.c\
+	  ft_atoi.c\
+	  ft_strchr.c\
+	  ft_strrchr.c\
+	  ft_strncmp.c\
+	  ft_memmove.c\
+	  ft_memchr.c\
+	  ft_memcmp.c\
+	  ft_strlcpy.c\
+	  ft_strlcat.c\
+	  ft_strnstr.c
 
 OBJS	= $(SRCS:.c=.o)
 
