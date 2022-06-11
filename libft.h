@@ -6,7 +6,7 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:56:34 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/11 11:27:23 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/11 15:56:11 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 char	*ft_itoa(int n);
+void	ft_putnbr_fd(int n, int fd);
+char	*ft_substr(const char *s, unsigned int start, size_t len);
 
 #endif
