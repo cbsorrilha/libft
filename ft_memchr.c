@@ -1,30 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:57:18 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/06 17:09:57 by csorrilh         ###   ########.fr       */
+/*   Created: 2022/06/08 18:48:40 by csorrilh          #+#    #+#             */
+/*   Updated: 2022/06/08 19:11:22 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+void	*ft_memchr(const void *s, int c, size_t len)
 {
-	char		*tmp_dest;
-	const char	*tmp_src;
+	unsigned long	i;
+	char			*nc;
 
-	tmp_dest = (char *)dst;
-	tmp_src = (const char *)src;
-	if ((tmp_dest == NULL) && (tmp_src == NULL))
+	i = 0;
+	while (i < len)
 	{
-		return (dst);
+		if (((char *)s)[i] == (char)c)
+		{
+			nc = &((char *)s)[i];
+			return (nc);
+		}
+		i++;
 	}
-	while (n--)
-	{
-		*(tmp_dest++) = *(tmp_src++);
-	}
-	return (dst);
+	return (NULL);
 }

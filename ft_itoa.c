@@ -1,30 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:57:18 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/06 17:09:57 by csorrilh         ###   ########.fr       */
+/*   Created: 2022/06/11 11:27:52 by csorrilh          #+#    #+#             */
+/*   Updated: 2022/06/11 12:11:42 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdlib.h>
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+#include"libft.h"
+
+static size_t	calculate_int_length(int i)
 {
-	char		*tmp_dest;
-	const char	*tmp_src;
+	size_t	c;
 
-	tmp_dest = (char *)dst;
-	tmp_src = (const char *)src;
-	if ((tmp_dest == NULL) && (tmp_src == NULL))
+	c = 0;
+	while (i / 10 > 9)
 	{
-		return (dst);
+		i /= 10;
+		c++;
 	}
-	while (n--)
+	c++;
+	return (c);
+}
+
+char	*ft_itoa(int n)
+{
+	size_t	c;
+	int		nbr;
+	char	*s;
+	int		is_negative;
+
+	nbr = n;
+	c = calculate_int_length(n);
+	if (n < 0)
 	{
-		*(tmp_dest++) = *(tmp_src++);
+		n = (n + 1) * (-1);
+		is_negative = 1;
+		c++;
 	}
-	return (dst);
+	s = malloc(c);
+	while (c--)
+	{
+		s[c] = n % 10 + 48;
+		n /= 10;
+	}
+	return (s);
 }

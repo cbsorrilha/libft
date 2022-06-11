@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:57:18 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/06 17:09:57 by csorrilh         ###   ########.fr       */
+/*   Created: 2022/06/11 10:39:08 by csorrilh          #+#    #+#             */
+/*   Updated: 2022/06/11 10:50:18 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdlib.h>
+#include"libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strdup(const char *s1)
 {
-	char		*tmp_dest;
-	const char	*tmp_src;
+	size_t	len;
+	char	*p;
+	int		i;
 
-	tmp_dest = (char *)dst;
-	tmp_src = (const char *)src;
-	if ((tmp_dest == NULL) && (tmp_src == NULL))
-	{
-		return (dst);
-	}
-	while (n--)
-	{
-		*(tmp_dest++) = *(tmp_src++);
-	}
-	return (dst);
+	len = ft_strlen((char *)s1);
+	p = malloc(len + 1);
+	if (p == NULL)
+		return (NULL);
+	i = -1;
+	while (s1[++i])
+		p[i] = s1[i];
+	p[i] = '\0';
+	return (p);
 }

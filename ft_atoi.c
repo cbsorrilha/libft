@@ -5,55 +5,64 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/01 14:49:01 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/01 16:02:34 by csorrilh         ###   ########.fr       */
+/*   Created: 2022/06/02 11:10:54 by csorrilh          #+#    #+#             */
+/*   Updated: 2022/06/06 12:12:17 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*itoa 256 % 10 = i6
- *
- * Espaços, ele pode ter quantidade abritraria de espaços e precisa ignorar
- * Pode ter UM sinal, positivo ou negativo ()++ é inválido
- * enquanto ft_isdigit
- * res + (res * 10) + digito - 48
- */
-#include<stdlib.h>
-#include<string.h>
-#include<stdio.h>
 #include"libft.h"
+#include<stdio.h>
 
-int	atoi(const char *str)
+static int	is_ignored(char c)
 {
-	int	i;
-	int	res;
-
-	i = 0;
-	while (str[i] == ' ')
+	if ((c >= 0 && c <= 13) || c == 32)
 	{
-		i++;
+		return (1);
 	}
-	if (str[i] == '+' || str[i] == '-')
-	{
-		i++;
-	}
-	while (ft_isdigit(str[i]))
-	{
-		res = (res * 10) + str[i] - 48;
-		i++;
-	}
-	if (ft_isdigit(str[i]))
-	{
-		return (0);
-	}
-	return (res);
+	return (0);
 }
 
-int main()
+static int	ignore_spaces(const char *str)
 {
-	char str[20];
+	int	i;
 
-	strcpy(str, "    -98993489");
+	i = 0;
+	while (is_ignored(str[i]))
+	{
+		i++;
+	}
+	return (i);
+}
 
-	atoi(str);
+static int	valid(int sig)
+{
+	if (sig > 0)
+		return (-1);
 	return (0);
+}
+
+int	ft_atoi(const char *str)
+{
+	int		is_negative;
+	long	result;
+	long	tmp;
+
+	result = 0;
+	is_negative = 1;
+	str = str + ignore_spaces(str);
+	if (*str == '-' || *str == '+')
+	{
+		if (*str == '-')
+			is_negative = -1;
+		str++;
+		if (*str == '-' || *str == '+')
+			return (0);
+	}
+	while (ft_isdigit(*str))
+	{
+		tmp = result;
+		result = (result * 10) + *str++ - 48;
+		if (result < tmp)
+			return (valid(is_negative));
+	}
+	return (is_negative * result);
 }

@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:57:18 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/06 17:09:57 by csorrilh         ###   ########.fr       */
+/*   Created: 2022/06/10 01:30:55 by csorrilh          #+#    #+#             */
+/*   Updated: 2022/06/10 02:10:40 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include<stdlib.h>
+#include"libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strnstr(const char *h, const char *n, size_t len)
 {
-	char		*tmp_dest;
-	const char	*tmp_src;
+	size_t	h_i;
+	size_t	n_i;
+	char	*first;
 
-	tmp_dest = (char *)dst;
-	tmp_src = (const char *)src;
-	if ((tmp_dest == NULL) && (tmp_src == NULL))
+	h_i = 0;
+	n_i = 0;
+	if (ft_strlen((char *)n) == 0)
+		return ((char *)h);
+	while (h[h_i] != n[n_i])
 	{
-		return (dst);
+		if (h_i == len - 1 || h[h_i] == '\0')
+			return (NULL);
+		h_i++;
 	}
-	while (n--)
+	first = &((char *)h)[h_i];
+	while (n[n_i] != '\0')
 	{
-		*(tmp_dest++) = *(tmp_src++);
+		if (n[n_i] != h[h_i])
+			return (NULL);
+		h_i++;
+		n_i++;
 	}
-	return (dst);
+	return (first);
 }
