@@ -6,7 +6,7 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 15:53:23 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/11 16:12:18 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/11 16:13:51 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,6 @@ char	*ft_substr(const char *s, unsigned int start, size_t len)
 		c[i] = s[start + i];
 		i++;
 	}
-	c[start + 1] = '\0';
+	c[start + i + 1] = '\0';
 	return (c);
 }
