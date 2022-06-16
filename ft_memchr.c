@@ -6,10 +6,11 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/08 18:48:40 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/08 19:11:22 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/15 15:12:10 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdlib.h>
+
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t len)
 {

@@ -6,7 +6,7 @@
 #    By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/29 11:58:27 by csorrilh          #+#    #+#              #
-#    Updated: 2022/06/11 16:01:37 by csorrilh         ###   ########.fr        #
+#    Updated: 2022/06/15 14:43:16 by csorrilh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,13 @@ SRCS	= ft_isalnum.c\
 	  ft_putstr_fd.c\
 	  ft_putendl_fd.c\
 	  ft_itoa.c\
-	  ft_substr.c
+	  ft_substr.c\
+	  ft_strjoin.c\
+	  ft_strtrim.c\
+	  ft_strmapi.c\
+	  ft_putnbr_fd.c\
+	  ft_split.c\
+	  ft_striteri.c
 
 OBJS	= $(SRCS:.c=.o)
 

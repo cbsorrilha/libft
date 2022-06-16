@@ -6,11 +6,11 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/09 21:57:22 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/11 10:16:27 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/15 15:22:38 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdlib.h>
-#include"libft.h"
+
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {

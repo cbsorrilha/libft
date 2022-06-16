@@ -1,31 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/31 17:57:18 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/15 15:12:52 by csorrilh         ###   ########.fr       */
+/*   Created: 2022/06/13 18:15:35 by csorrilh          #+#    #+#             */
+/*   Updated: 2022/06/13 18:19:10 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
-	char		*tmp_dest;
-	const char	*tmp_src;
+	size_t	i;
+	char	*s2;
 
-	tmp_dest = (char *)dst;
-	tmp_src = (const char *)src;
-	if ((tmp_dest == NULL) && (tmp_src == NULL))
+	if (!s || !f)
+		return (NULL);
+	i = 0;
+	s2 = ft_calloc((ft_strlen((char *)s) + 1), sizeof (char));
+	if (!s2)
+		return (NULL);
+	while (s[i])
 	{
-		return (dst);
+		s2[i] = f(i, s[i]);
+		i++;
 	}
-	while (n--)
-	{
-		*(tmp_dest++) = *(tmp_src++);
-	}
-	return (dst);
+	s2[i] = '\0';
+	return (s2);
 }

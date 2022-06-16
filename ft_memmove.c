@@ -6,11 +6,11 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/06 17:03:17 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/08 18:42:22 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/15 15:13:33 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdlib.h>
-#include"libft.h"
+
+#include "libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {

@@ -6,68 +6,69 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/11 11:27:52 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/11 15:46:36 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/15 15:09:33 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include"libft.h"
+#include "libft.h"
 
 static size_t	calculate_int_length(long i)
 {
 	size_t	c;
 
 	c = 0;
-    while (i > 0)
-    {
-        i /= 10;
-        c++;
-    }
-    return (c);
+	while (i > 0)
+	{
+		i /= 10;
+		c++;
+	}
+	return (c);
 }
 
 static char	*zero_guard(void)
 {
 	char	*s;
+
 	s = (char *)malloc(2);
 	s[0] = 48;
 	s[1] = '\0';
 	return (s);
 }
 
-static void	fill_int_string(char * s, size_t c, long l)
+static void	fill_int_string(char *s, size_t c, long l)
 {
-	while(c-- > 0)
+	while (c-- > 0)
 	{
-        s[c] = (l % 10) + 48;
-        l /= 10;
+		s[c] = (l % 10) + 48;
+		l /= 10;
 	}
 }
 
 char	*ft_itoa(int n)
 {
-    size_t	c;
-    char	*s;
-    int		is_negative;
+	size_t	c;
+	char	*s;
+	int		is_negative;
 	long	l;
 
 	c = 0;
 	l = (long )n;
 	is_negative = 0;
 	if (n == 0)
-		return zero_guard();
-    if (l < 0)
-    {
-        l = l  * -1;
-        is_negative = 1;
-        c++;
-    }
+		return (zero_guard());
+	if (l < 0)
+	{
+		l = l * -1;
+		is_negative = 1;
+		c++;
+	}
 	c = c + calculate_int_length(l);
 	s = (char *)malloc(c +1);
 	if (s == NULL)
 		return (NULL);
-    s[c] = '\0';
+	s[c] = '\0';
 	fill_int_string(s, c, l);
 	if (is_negative != 0)
 		s[0] = '-';
-    return (s);
+	return (s);
 }

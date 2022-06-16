@@ -6,11 +6,10 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/02 11:10:54 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/06 12:12:17 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/15 15:04:56 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include"libft.h"
-#include<stdio.h>
 
 static int	is_ignored(char c)
 {
