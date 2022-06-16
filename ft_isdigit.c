@@ -6,13 +6,13 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 12:14:09 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/05/29 12:14:33 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/16 15:04:10 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(int ch)
+int	ft_isdigit(int c)
 {
-	if (ch >= '0' && ch <= '9')
+	if (c >= '0' && c <= '9')
 	{
 		return (1);
 	}

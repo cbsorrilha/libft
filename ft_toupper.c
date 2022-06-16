@@ -6,20 +6,18 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 16:39:53 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/05/30 16:51:05 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/16 15:10:34 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* span = 40 because of the distance between upper */
-/* and lower case characters in ascci table*/
-int	ft_toupper(int ch)
+int	ft_toupper(int c)
 {
 	int	span;
 
 	span = 32;
-	if (ch >= 97 && ch <= 122)
+	if (c >= 97 && c <= 122)
 	{
-		return (ch - span);
+		return (c - span);
 	}
-	return (ch);
+	return (c);
 }

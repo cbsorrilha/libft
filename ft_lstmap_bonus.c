@@ -6,7 +6,7 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 14:09:26 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/16 14:14:37 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/16 14:37:17 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,5 +29,5 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 		ft_lstadd_back(&new_list, new_node);
 		lst = lst->next;
 	}
-	return (lst);
+	return (new_list);
 }

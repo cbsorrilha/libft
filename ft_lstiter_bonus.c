@@ -6,13 +6,13 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 13:42:21 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/16 14:07:37 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/16 14:35:21 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void *(*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!f || !lst)
 		return ;

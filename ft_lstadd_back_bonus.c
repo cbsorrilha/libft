@@ -6,7 +6,7 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/06/16 00:16:21 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/16 00:22:35 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/16 14:34:45 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,9 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	t_list	*last;
 
 	last = *lst;
-	new->next = NULL;
-	if (!(ft_lstsize(last)))
+	if (*lst == NULL)
 	{
-		*last = *new;
+		*lst = new;
 		return ;
 	}
 	while (last->next != NULL)

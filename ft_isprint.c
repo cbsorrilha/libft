@@ -6,13 +6,13 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 16:06:40 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/05/30 16:30:07 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/16 15:04:26 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isprint(int ch)
+int	ft_isprint(int c)
 {
-	if (ch >= 32 && ch < 127)
+	if (c >= 32 && c < 127)
 	{
 		return (1);
 	}

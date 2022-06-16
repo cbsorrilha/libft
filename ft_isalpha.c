@@ -6,13 +6,13 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/29 11:45:27 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/05/29 12:13:02 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/16 15:03:40 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalpha(int ch)
+int	ft_isalpha(int c)
 {
-	if ((ch >= 'a' && ch <= 'z') || (ch >= 'A' && ch <= 'Z'))
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}

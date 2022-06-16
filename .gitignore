@@ -3,3 +3,4 @@ tmp_*
 libft.h.gch
 *.out
 tags
+*.swp

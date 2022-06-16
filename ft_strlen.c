@@ -6,11 +6,11 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 10:55:01 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/05/31 11:03:04 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/16 15:08:24 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *s)
+int	ft_strlen(const char *s)
 {
 	int	c;
 
