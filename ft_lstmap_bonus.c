@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/02 11:10:54 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/16 13:38:03 by csorrilh         ###   ########.fr       */
+/*   Created: 2022/06/16 14:09:26 by csorrilh          #+#    #+#             */
+/*   Updated: 2022/06/16 14:14:37 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	size_t		i;
-	long int	nb;
-	int			is_sign;
+	t_list	*new_list;
+	t_list	*new_node;
 
-	i = 0;
-	nb = 0;
-	is_sign = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	new_list = NULL;
+	while (lst)
 	{
-		if (str[i + 1] == '-' || str[i + 1] == '+')
-			return (0);
-		else if (str[i] == '-')
-			is_sign = -1;
-		i++;
+		new_node = ft_lstnew(f(lst->content));
+		if (!new_node)
+		{
+			ft_lstclear(&new_list, del);
+			return (new_list);
+		}
+		ft_lstadd_back(&new_list, new_node);
+		lst = lst->next;
 	}
-	while (ft_isdigit(str[i]))
-	{
-		nb = (nb * 10) + str[i] - 48;
-		i++;
-	}
-	return ((int)nb * is_sign);
+	return (lst);
 }

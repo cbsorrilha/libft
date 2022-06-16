@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/06/02 11:10:54 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/16 13:38:03 by csorrilh         ###   ########.fr       */
+/*   Created: 2022/06/16 13:42:21 by csorrilh          #+#    #+#             */
+/*   Updated: 2022/06/16 14:07:37 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_lstiter(t_list *lst, void *(*f)(void *))
 {
-	size_t		i;
-	long int	nb;
-	int			is_sign;
-
-	i = 0;
-	nb = 0;
-	is_sign = 1;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	if (!f || !lst)
+		return ;
+	while (lst)
 	{
-		if (str[i + 1] == '-' || str[i + 1] == '+')
-			return (0);
-		else if (str[i] == '-')
-			is_sign = -1;
-		i++;
+		f(lst->content);
+		lst = lst->next;
 	}
-	while (ft_isdigit(str[i]))
-	{
-		nb = (nb * 10) + str[i] - 48;
-		i++;
-	}
-	return ((int)nb * is_sign);
 }

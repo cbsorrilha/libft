@@ -6,7 +6,7 @@
 #    By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/29 11:58:27 by csorrilh          #+#    #+#              #
-#    Updated: 2022/06/16 00:10:11 by csorrilh         ###   ########.fr        #
+#    Updated: 2022/06/16 14:02:23 by csorrilh         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,11 +47,7 @@ SRCS	= ft_isalnum.c\
 
 OBJS	= $(SRCS:.c=.o)
 
-BONUS_SRC	= ft_lstnew_bonus.c\
-		  ft_lstadd_front_bonus.c\
-		  ft_lstsize_bonus.c\
-		  ft_lstlast_bonus.c\
-		  ft_lstadd_back_bonus.c
+BONUS_SRC	= ft_lstiter_bonus.c
 
 OBJS_BONUS	= ${BONUS_SRC:.c=.o}
 

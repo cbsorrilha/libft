@@ -6,7 +6,7 @@
 /*   By: csorrilh <cbsorrilha@hotmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/30 10:56:34 by csorrilh          #+#    #+#             */
-/*   Updated: 2022/06/16 00:28:30 by csorrilh         ###   ########.fr       */
+/*   Updated: 2022/06/16 14:00:48 by csorrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,7 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
 t_list	*ft_lstlast(t_list *lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del) (void*));
+void	ft_lstiter(t_list *lst, void *(*f)(void *));
 
 #endif
