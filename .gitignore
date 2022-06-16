@@ -1,3 +1,5 @@
 tmp_*
 *.o
 libft.h.gch
+*.out
+tags
